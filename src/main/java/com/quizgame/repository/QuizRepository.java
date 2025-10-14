@@ -6,11 +6,13 @@ import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 import com.amazonaws.services.dynamodbv2.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.quizgame.model.Quiz;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Repository
-public class QuizRepository {
+@Profile("!prod")
+public class QuizRepository implements QuizRepositoryInterface {
     private final DynamoDB dynamoDB;
     private final ObjectMapper mapper = new ObjectMapper();
     private static final String TABLE_NAME = "Quizzes";

@@ -5,9 +5,11 @@ import com.amazonaws.services.sqs.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.quizgame.model.ScoreUpdate;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile("!prod")
 public class SqsService {
     private final AmazonSQS amazonSQS;
     private final ObjectMapper mapper = new ObjectMapper();

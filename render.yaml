@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: quiz-game
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: JAVA_OPTS
+        value: "-Xmx512m"
+      - key: PORT
+        value: 8082
+
