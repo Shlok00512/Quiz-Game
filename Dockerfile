@@ -21,7 +21,7 @@ WORKDIR /app
 # Copy the built JAR from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Expose the application port
+# Expose the application port (Railway will override with PORT env var)
 EXPOSE 8080
 
 # Set environment variables for production
@@ -29,7 +29,8 @@ ENV JAVA_OPTS="-Xmx512m -Xms256m"
 ENV SPRING_PROFILES_ACTIVE=prod
 
 # Run the application
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Dspring.profiles.active=${SPRING_PROFILES_ACTIVE} -jar app.jar"]
+# Railway sets PORT env var automatically, Spring Boot will use it
+CMD ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]
 
 
 
