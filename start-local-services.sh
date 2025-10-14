@@ -72,3 +72,4 @@ echo "To stop services: $COMPOSE_CMD down"
 echo "To view logs: $COMPOSE_CMD logs -f"
 
 
+

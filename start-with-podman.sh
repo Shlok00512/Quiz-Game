@@ -56,3 +56,4 @@ echo "To stop services: podman stop quiz-game-dynamodb quiz-game-sqs"
 echo "To view logs: podman logs -f quiz-game-dynamodb"
 
 
+

@@ -45,3 +45,4 @@ echo "Next steps:"
 echo "1. Restart your terminal or run: source ~/.zshrc"
 echo "2. Run the app: cd ~/Desktop/Quiz-Game && ./mvnw spring-boot:run"
 
+
