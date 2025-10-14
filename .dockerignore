@@ -1,0 +1,12 @@
+target/
+.mvn/
+*.log
+.git
+.gitignore
+README.md
+SETUP.md
+QUICKSTART.md
+*.md
+.DS_Store
+
+

@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    container_name: quiz-game-dynamodb
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
+    networks:
+      - quiz-network
+    
+  sqs-local:
+    image: softwaremill/elasticmq:latest
+    container_name: quiz-game-sqs
+    ports:
+      - "9324:9324"
+      - "9325:9325"
+    volumes:
+      - ./elasticmq.conf:/opt/elasticmq.conf
+    networks:
+      - quiz-network
+
+  quiz-app:
+    build: .
+    container_name: quiz-game-app
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - AWS_DYNAMODB_ENDPOINT=http://dynamodb-local:8000
+      - AWS_SQS_ENDPOINT=http://sqs-local:9324
+    depends_on:
+      - dynamodb-local
+      - sqs-local
+    networks:
+      - quiz-network
+
+networks:
+  quiz-network:
+    driver: bridge
+
+
