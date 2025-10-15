@@ -795,18 +795,19 @@
             const resultMessage = document.getElementById('resultMessage');
             const performanceFill = document.getElementById('performanceFill');
 
-            const percentage = (currentScore / 30) * 100;
+            const maxScore = 50; // 5 questions × 10 points each
+            const percentage = (currentScore / maxScore) * 100;
             performanceFill.style.width = percentage + '%';
 
-            finalScore.textContent = `${currentScore}/30`;
+            finalScore.textContent = `${currentScore}/${maxScore}`;
 
-            if (currentScore === 30) {
+            if (currentScore === maxScore) {
                 resultEmoji.textContent = '👑';
-                resultMessage.textContent = 'Flawless Victory! You are the QuizMaster!';
-            } else if (currentScore >= 20) {
+                resultMessage.textContent = 'Flawless Victory! You are the Nike QuizMaster!';
+            } else if (currentScore >= 40) {
                 resultEmoji.textContent = '🔥';
-                resultMessage.textContent = 'Outstanding! You dominated this challenge!';
-            } else if (currentScore >= 10) {
+                resultMessage.textContent = 'Outstanding! You dominated this Nike challenge!';
+            } else if (currentScore >= 20) {
                 resultEmoji.textContent = '⭐';
                 resultMessage.textContent = 'Good effort! Keep pushing forward!';
             } else {
