@@ -594,7 +594,10 @@
     </footer>
 
     <script>
-        const API_BASE = 'http://localhost:8082/api/quiz';
+        // Auto-detect if we're running locally or on Railway
+        const API_BASE = window.location.hostname === 'localhost' 
+            ? 'http://localhost:8082/api/quiz' 
+            : `${window.location.origin}/api/quiz`;
         let quizId = null;
         let currentQuestion = null;
         let currentScore = 0;
