@@ -13,3 +13,4 @@ public class Quiz {
     private long startTime;
     private String status; // ACTIVE, COMPLETED
 }
+

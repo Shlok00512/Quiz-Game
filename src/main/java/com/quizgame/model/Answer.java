@@ -8,3 +8,4 @@ public class Answer {
     private String questionId;
     private int selectedAnswer;
 }
+

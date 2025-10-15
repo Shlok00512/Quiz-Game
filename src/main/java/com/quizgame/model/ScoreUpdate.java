@@ -10,3 +10,4 @@ public class ScoreUpdate {
     private boolean correct;
     private long timestamp;
 }
+

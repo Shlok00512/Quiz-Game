@@ -11,3 +11,4 @@ public class Question {
     private int correctAnswer;
     private int timeLimit; // seconds
 }
+

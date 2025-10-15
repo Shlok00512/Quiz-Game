@@ -7,3 +7,4 @@ public interface QuizRepositoryInterface {
     Quiz findById(String id);
 }
 
+
