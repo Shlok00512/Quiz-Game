@@ -795,7 +795,7 @@
             const resultMessage = document.getElementById('resultMessage');
             const performanceFill = document.getElementById('performanceFill');
 
-            const maxScore = 50; // 5 questions × 10 points each
+            const maxScore = 150; // 15 questions × 10 points each
             const percentage = (currentScore / maxScore) * 100;
             performanceFill.style.width = percentage + '%';
 
@@ -803,16 +803,19 @@
 
             if (currentScore === maxScore) {
                 resultEmoji.textContent = '👑';
-                resultMessage.textContent = 'Flawless Victory! You are the Nike QuizMaster!';
-            } else if (currentScore >= 40) {
+                resultMessage.textContent = 'Flawless Victory! You are the Ultimate Nike QuizMaster!';
+            } else if (currentScore >= 120) {
                 resultEmoji.textContent = '🔥';
                 resultMessage.textContent = 'Outstanding! You dominated this Nike challenge!';
-            } else if (currentScore >= 20) {
+            } else if (currentScore >= 90) {
                 resultEmoji.textContent = '⭐';
-                resultMessage.textContent = 'Good effort! Keep pushing forward!';
-            } else {
+                resultMessage.textContent = 'Great performance! You know your Nike facts!';
+            } else if (currentScore >= 60) {
                 resultEmoji.textContent = '💪';
-                resultMessage.textContent = 'Practice makes perfect! Try again!';
+                resultMessage.textContent = 'Good effort! Keep learning about Nike!';
+            } else {
+                resultEmoji.textContent = '📚';
+                resultMessage.textContent = 'Keep practicing! Every champion starts somewhere!';
             }
         }
 

@@ -124,6 +124,86 @@ public class QuizService {
         q5.setTimeLimit(10);
         questions.add(q5);
 
+        Question q6 = new Question();
+        q6.setId("q6");
+        q6.setText("What is the approximate market cap of Nike (as of 2024)?");
+        q6.setOptions(Arrays.asList("$50 billion", "$160 billion", "$250 billion", "$320 billion"));
+        q6.setCorrectAnswer(1);
+        q6.setTimeLimit(20);
+        questions.add(q6);
+
+        Question q7 = new Question();
+        q7.setId("q7");
+        q7.setText("Who are the co-founders of Nike?");
+        q7.setOptions(Arrays.asList("Phil Knight & Steve Jobs", "Phil Knight & Bill Bowerman", "Michael Jordan & Phil Knight", "Bill Gates & Bill Bowerman"));
+        q7.setCorrectAnswer(1);
+        q7.setTimeLimit(15);
+        questions.add(q7);
+
+        Question q8 = new Question();
+        q8.setId("q8");
+        q8.setText("In which year did Nike sign Michael Jordan?");
+        q8.setOptions(Arrays.asList("1980", "1984", "1988", "1992"));
+        q8.setCorrectAnswer(1);
+        q8.setTimeLimit(15);
+        questions.add(q8);
+
+        Question q9 = new Question();
+        q9.setId("q9");
+        q9.setText("What is the name of Nike's innovation lab in Oregon?");
+        q9.setOptions(Arrays.asList("Innovation Hub", "Nike Sport Research Lab", "Tech Center Portland", "Bowerman Building"));
+        q9.setCorrectAnswer(1);
+        q9.setTimeLimit(20);
+        questions.add(q9);
+
+        Question q10 = new Question();
+        q10.setId("q10");
+        q10.setText("Which famous soccer player had a lifetime deal with Nike?");
+        q10.setOptions(Arrays.asList("Lionel Messi", "Cristiano Ronaldo", "Neymar Jr", "Kylian Mbappé"));
+        q10.setCorrectAnswer(1);
+        q10.setTimeLimit(15);
+        questions.add(q10);
+
+        Question q11 = new Question();
+        q11.setId("q11");
+        q11.setText("How much did Carolyn Davidson get paid for designing the Nike Swoosh?");
+        q11.setOptions(Arrays.asList("$35", "$350", "$3,500", "$35,000"));
+        q11.setCorrectAnswer(0);
+        q11.setTimeLimit(20);
+        questions.add(q11);
+
+        Question q12 = new Question();
+        q12.setId("q12");
+        q12.setText("What is Nike's corporate headquarters called?");
+        q12.setOptions(Arrays.asList("Nike Campus", "World Headquarters", "Nike World Campus", "Swoosh Center"));
+        q12.setCorrectAnswer(2);
+        q12.setTimeLimit(15);
+        questions.add(q12);
+
+        Question q13 = new Question();
+        q13.setId("q13");
+        q13.setText("Which Nike shoe line became a cultural icon in the 1980s?");
+        q13.setOptions(Arrays.asList("Nike Cortez", "Air Max", "Air Jordan", "Nike Dunk"));
+        q13.setCorrectAnswer(2);
+        q13.setTimeLimit(15);
+        questions.add(q13);
+
+        Question q14 = new Question();
+        q14.setId("q14");
+        q14.setText("What does Nike's Air technology contain in the sole?");
+        q14.setOptions(Arrays.asList("Oxygen", "Nitrogen", "Carbon Dioxide", "Pressurized Gas"));
+        q14.setCorrectAnswer(3);
+        q14.setTimeLimit(20);
+        questions.add(q14);
+
+        Question q15 = new Question();
+        q15.setId("q15");
+        q15.setText("Which tennis legend has been sponsored by Nike since 2003?");
+        q15.setOptions(Arrays.asList("Serena Williams", "Roger Federer", "Rafael Nadal", "Novak Djokovic"));
+        q15.setCorrectAnswer(2);
+        q15.setTimeLimit(15);
+        questions.add(q15);
+
         return questions;
     }
 }
